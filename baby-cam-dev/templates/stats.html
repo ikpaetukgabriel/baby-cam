@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../static/css/stats.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../static/js/stats.js"></script>
+    <!-- <script src="{{ url_for('static', filename='js/stats.js') }}"></script> -->
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="graph-container">
+      <canvas
+        id="soundChart"
+        style="width: 50%; max-width: 100vw; max-height: 50vh"
+      ></canvas>
+      <canvas
+        id="motionChart"
+        style="width: 50%; max-width: 100vw; max-height: 50vh"
+      ></canvas>
+    </div>
+  </body>
+</html>

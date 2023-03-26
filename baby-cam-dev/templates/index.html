@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Live Video Feed</title>
+    <!-- font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- styling -->
+    <!-- <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/baby-cam.css') }}"
+    /> -->
+    <link rel="stylesheet" href="../static/css/baby-cam.css" />
+
+    <!-- javascript -->
+    <!-- <script src="{{ url_for('static', filename='js/baby-cam.js') }}"></script> -->
+    <script src="../static/js/baby-cam.js"></script>
+    <style></style>
+  </head>
+  <body id="main-container">
+    <div id="top-container">
+      <div id="logo-name">WakandaBoys BabyCam</div>
+      <div class="indicators">
+        <div id="sound-container">
+          <img id="sound-icon" src="../static/no-crying-baby.png" />
+          <div>Sound</div>
+        </div>
+        <div id="motion-container">
+          <img id="motion-icon" src="../static/no-crawling-baby.png" />
+          <div>Motion</div>
+        </div>
+      </div>
+    </div>
+    <div id="middle-container">
+      <img id="camera-bg" src="{{ url_for('video_feed') }}" />
+      <img id="live-icon" src="../static/live-icon.png" alt="Live" />
+      <div id="camera-button-container">
+        <button class="camera-bttn">
+          <i class="fa fa-camera"></i>
+        </button>
+      </div>
+    </div>
+    <div id="bottom-container">
+      <div class="btn-container">
+        <a href="{{ url_for('stats')}}"
+          ><button class="btn stat-bttn">Live Stats</button></a
+        >
+        <a href="../templates/captures.html"
+          ><button class="btn captures-bttn">Captures</button></a
+        >
+      </div>
+    </div>
+  </body>
+</html>
